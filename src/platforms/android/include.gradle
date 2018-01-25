@@ -1,0 +1,31 @@
+android {
+	productFlavors {
+		"nativescript-ebook" {
+			dimension "nativescript-ebook"
+		}
+	}
+
+	packagingOptions {
+		exclude 'META-INF/DEPENDENCIES.txt'
+		exclude 'META-INF/LICENSE.txt'
+		exclude 'META-INF/NOTICE.txt'
+		exclude 'META-INF/NOTICE'
+		exclude 'META-INF/LICENSE'
+		exclude 'META-INF/DEPENDENCIES'
+		exclude 'META-INF/notice.txt'
+		exclude 'META-INF/license.txt'
+		exclude 'META-INF/dependencies.txt'
+		exclude 'META-INF/LGPL2.1'
+	}
+}
+
+allprojects {
+    repositories {
+        maven { url "http://dl.bintray.com/mobisystech/maven" }
+    }
+}
+
+dependencies {
+	def withoutNano = { exclude group: 'org.nanohttpd', module: 'nanohttpd' }
+	compile 'com.folioreader:folioreader:0.3.3', withoutNano
+}
