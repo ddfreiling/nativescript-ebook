@@ -1,4 +1,5 @@
-/// <reference path="./android-FolioReader.d.ts" />
+/// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
+/// <reference path="./native-definitions/java!FolioReader.d.ts" />
 
 import * as app from 'tns-core-modules/application';
 
