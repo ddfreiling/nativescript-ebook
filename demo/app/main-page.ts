@@ -13,9 +13,17 @@ export function pageLoaded(args: observable.EventData) {
 }
 
 export function openBook() {
-    console.log(`openBook`);
+    openBookWithEReader('44735.epub');
+}
 
-    const path = fs.File.fromPath(fs.path.join(fs.knownFolders.currentApp().path, 'orwell1984.epub')).path;
+export function openBook2() {
+    openBookWithEReader('horseman.epub');
+}
+
+function openBookWithEReader(bookAppRelativePath: string) {
+    console.log(`openBookWithEReader`);
+
+    const path = fs.File.fromPath(fs.path.join(fs.knownFolders.currentApp().path, bookAppRelativePath)).path;
     console.log(`path: ${path}`);
 
     const reader = new EBookReader();

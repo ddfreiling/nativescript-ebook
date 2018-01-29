@@ -1,6 +1,7 @@
 .vscode
 .idea
 .DS_Store
+*.epub
 *.js
 *.js.map
 *.log

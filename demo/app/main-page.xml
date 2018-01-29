@@ -3,5 +3,6 @@
   <StackLayout class="p-20">
     <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
     <Button text="Open ePub" tap="openBook" />
+    <Button text="Open ePub" tap="openBook2" />
   </StackLayout>
 </Page>
