@@ -2,7 +2,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 #pod 'FolioReaderKit', '1.3.0'
-pod 'FolioReaderKit', :git => 'https://github.com/FolioReader/FolioReaderKit.git', :commit => '444ea35', :branch => 'master'
+#pod 'FolioReaderKit', :git => 'https://github.com/FolioReader/FolioReaderKit.git', :commit => '444ea35', :branch => 'master'
+pod 'FolioReaderKit', :git => 'https://github.com/ddfreiling/FolioReaderKit.git', :branch => 'objc-support'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

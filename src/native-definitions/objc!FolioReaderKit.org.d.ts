@@ -33,8 +33,6 @@ declare class FolioReader extends NSObject {
 
 	static new(): FolioReader; // inherited from NSObject
 
-	presentReaderWithParentViewControllerWithEpubPathUnzipPathAndConfigShouldRemoveEpubAnimated(parentViewController: UIViewController, epubPath: string, unzipPath: string, config: FolioReaderConfig, shouldRemoveEpub: boolean, animated: boolean): void;
-
 	saveReaderState(): void;
 }
 
@@ -216,44 +214,6 @@ declare class FolioReaderConfig extends NSObject {
 	static alloc(): FolioReaderConfig; // inherited from NSObject
 
 	static new(): FolioReaderConfig; // inherited from NSObject
-
-	allowSharing: boolean;
-
-	canChangeScrollDirection: boolean;
-
-	displayTitle: boolean;
-
-	enableTTS: boolean;
-
-	hideBars: boolean;
-
-	hidePageIndicator: boolean;
-
-	identifier: string;
-
-	loadSavedPositionForCurrentBook: boolean;
-
-	mediaOverlayColor: UIColor;
-
-	menuBackgroundColor: UIColor;
-
-	menuSeparatorColor: UIColor;
-
-	menuTextColor: UIColor;
-
-	nightModeBackground: UIColor;
-
-	nightModeMenuBackground: UIColor;
-
-	nightModeSeparatorColor: UIColor;
-
-	scrollDirection: FolioReaderScrollDirection;
-
-	shouldHideNavigationOnTap: boolean;
-
-	tintColor: UIColor;
-
-	useReaderMenuController: boolean;
 }
 
 declare class FolioReaderContainer extends UIViewController {
@@ -371,17 +331,6 @@ declare var FolioReaderPageDelegate: {
 
 	prototype: FolioReaderPageDelegate;
 };
-
-declare const enum FolioReaderScrollDirection {
-
-	Vertical = 0,
-
-	Horizontal = 1,
-
-	HorizontalWithVerticalContent = 2,
-
-	DefaultVertical = 3
-}
 
 declare class FolioReaderWebView extends UIWebView {
 
